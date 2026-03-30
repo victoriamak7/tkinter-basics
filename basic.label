@@ -1,0 +1,25 @@
+from tkinter import *
+
+#label - widget that holds text and/or image within a window
+
+window = Tk()
+
+photo = PhotoImage(file = "Ghibli.png")
+label = Label(window,
+              text = "hello!!!!!",
+              font = ("Times New Roman", 20, "italic"), #font,size,style
+              fg = 'white',
+              bg = 'pink',
+              relief = RAISED,
+              bd = 2, #border
+              padx = 5,
+              pady = 5,
+              image= photo)
+              #compound = 'left')
+
+#fg-foreground, bg- background
+label.pack() #showing the text on the screen
+#label.place(x=0,y=0) #to set the text in the left corner (instead of .pack)
+
+
+window.mainloop()
