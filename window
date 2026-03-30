@@ -1,0 +1,9 @@
+from tkinter import *
+window = Tk() #instantiate an instance of a window
+window.geometry("420x420") #setting dimensions
+window.title("victoria's first GUI program") #setting the title
+#to change the icon use icon = PhotoImage(file="name"),
+#then window.iconphoto(True,icon)
+window.config(background="#d192be") #changing the background
+
+window.mainloop() #this opens window on the screen
