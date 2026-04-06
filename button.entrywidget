@@ -1,0 +1,34 @@
+from tkinter import *
+
+def submit():
+    username = entry.get() #this retrieves the text that we entered and stores it within a variable user
+    print("hello " + username)
+
+def delete():
+    entry.delete(0, END) #this deletes the line of text
+
+def backspace():
+    entry.delete(len(entry.get())-1,END) #delete last character
+
+window = Tk()
+
+submit = Button(window, text = 'submit', command = submit)
+submit.pack(side = "right")
+
+delete = Button(window, text = 'delete', command = delete)
+delete.pack(side = "right")
+
+backspace = Button(window, text = 'backspace', command = backspace)
+backspace.pack(side = "right")
+
+entry = Entry()
+entry.config(font = ("Times New Roman", 25))
+entry.config(bg = "#910c19")
+entry.config(fg = "white")
+#entry.insert(0, 'mantra')
+#entry.config(state = DISABLED) #active/disabled
+entry.config(width = 50)
+#entry.config(show = '~') #this will hide and replace all the info
+
+entry.pack()
+window.mainloop()
